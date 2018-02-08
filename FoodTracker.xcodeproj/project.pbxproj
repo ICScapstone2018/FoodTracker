@@ -14,6 +14,7 @@
 		868393992025014E002F530E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868393972025014E002F530E /* LaunchScreen.storyboard */; };
 		868393A42025014E002F530E /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868393A32025014E002F530E /* FoodTrackerTests.swift */; };
 		868393AF2025014E002F530E /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868393AE2025014E002F530E /* FoodTrackerUITests.swift */; };
+		86CF087A202CCDF800ADA6B7 /* ExpiryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF0879202CCDF800ADA6B7 /* ExpiryIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		868393AA2025014E002F530E /* FoodTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		868393AE2025014E002F530E /* FoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerUITests.swift; sourceTree = "<group>"; };
 		868393B02025014E002F530E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86CF0879202CCDF800ADA6B7 /* ExpiryIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiryIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				8683938E2025014D002F530E /* AppDelegate.swift */,
 				868393902025014D002F530E /* ViewController.swift */,
 				868393922025014E002F530E /* Main.storyboard */,
+				86CF0879202CCDF800ADA6B7 /* ExpiryIndicator.swift */,
 				868393952025014E002F530E /* Assets.xcassets */,
 				868393972025014E002F530E /* LaunchScreen.storyboard */,
 				8683939A2025014E002F530E /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				868393912025014D002F530E /* ViewController.swift in Sources */,
 				8683938F2025014D002F530E /* AppDelegate.swift in Sources */,
+				86CF087A202CCDF800ADA6B7 /* ExpiryIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
