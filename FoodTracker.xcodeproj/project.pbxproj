@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8605441A202CDED1008EB278 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86054419202CDED1008EB278 /* FoodItem.swift */; };
 		8683938F2025014D002F530E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683938E2025014D002F530E /* AppDelegate.swift */; };
 		868393912025014D002F530E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868393902025014D002F530E /* ViewController.swift */; };
 		868393942025014E002F530E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868393922025014E002F530E /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86054419202CDED1008EB278 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		8683938B2025014D002F530E /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8683938E2025014D002F530E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868393902025014D002F530E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				868393902025014D002F530E /* ViewController.swift */,
 				868393922025014E002F530E /* Main.storyboard */,
 				86CF0879202CCDF800ADA6B7 /* ExpiryIndicator.swift */,
+				86054419202CDED1008EB278 /* FoodItem.swift */,
 				868393952025014E002F530E /* Assets.xcassets */,
 				868393972025014E002F530E /* LaunchScreen.storyboard */,
 				8683939A2025014E002F530E /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8605441A202CDED1008EB278 /* FoodItem.swift in Sources */,
 				868393912025014D002F530E /* ViewController.swift in Sources */,
 				8683938F2025014D002F530E /* AppDelegate.swift in Sources */,
 				86CF087A202CCDF800ADA6B7 /* ExpiryIndicator.swift in Sources */,
