@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: Properties
-    
+    @IBOutlet weak var photoImageView: UIImageView!
     // MARK: Delegate Methods
 
     override func viewDidLoad() {
