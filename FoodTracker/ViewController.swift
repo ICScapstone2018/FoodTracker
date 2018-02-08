@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Properties
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var expiryDate: UIDatePicker!
+    @IBOutlet weak var expiryIndicator: ExpiryIndicator!
     // MARK: Delegate Methods
 
     override func viewDidLoad() {

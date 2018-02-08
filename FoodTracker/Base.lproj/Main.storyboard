@@ -50,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="expiryDate" destination="3Yp-EA-hQb" id="dqC-gk-8nO"/>
+                        <outlet property="expiryIndicator" destination="U0h-a5-xT2" id="vlb-bZ-5VJ"/>
                         <outlet property="photoImageView" destination="RVc-4j-D6N" id="EMe-qd-0bw"/>
                     </connections>
                 </viewController>
