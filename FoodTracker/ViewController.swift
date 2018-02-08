@@ -12,11 +12,17 @@ import os
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var expiryDate: UIDatePicker!
     // MARK: Delegate Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.expiryDate.addTarget(self, action: #selector(dateChanged(_:)),
+        for: .valueChanged)
+    }
+    @objc func dateChanged(_ sender: UIDatePicker) {
+        debugPrint(sender.date)
     }
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         let imagePickerController = UIImagePickerController()
