@@ -10,6 +10,11 @@ import UIKit
 
 class FoodItemTableViewCell: UITableViewCell {
 
+    // MARK: Properties
+    
+    @IBOutlet weak var photoImage: UIImageView!
+    
+    @IBOutlet weak var expiryIndicator: ExpiryIndicator!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
