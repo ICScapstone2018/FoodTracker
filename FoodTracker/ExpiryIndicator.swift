@@ -31,5 +31,6 @@ class ExpiryIndicator: UIStackView {
     
     func setIndicatorPercentage() {
        // setIndicatorPercentage(date: item.expiryDate)
+        
  }
 }
