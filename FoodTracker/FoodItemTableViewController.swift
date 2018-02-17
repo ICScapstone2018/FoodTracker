@@ -49,6 +49,14 @@ class FoodItemTableViewController: UITableViewController {
         
         return cell
     }
+    
+    @IBAction func unwindToFoodItemList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ViewController, let item = sourceViewController.item {
+            let newIndexPath = IndexPath(row: items.count, section: 0)
+            items.append(item)
+            tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
+        }
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

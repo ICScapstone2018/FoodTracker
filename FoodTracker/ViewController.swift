@@ -11,11 +11,18 @@ import os
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
+    
+    var item: FoodItem?
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var expiryDate: UIDatePicker!
     @IBOutlet weak var expiryIndicator: ExpiryIndicator!
     // MARK: Delegate Methods
 
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,6 +56,15 @@ expiryIndicator.expiry(date: sender.date)
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            return
+        }
+        
+        item = FoodItem(image: photoImageView.image ?? #imageLiteral(resourceName: "defaultImage"), expiryDate: expiryDate.date)
     }
     // MARK: Actions
 
