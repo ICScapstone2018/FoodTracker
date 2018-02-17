@@ -23,7 +23,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         for: .valueChanged)
     }
     @objc func dateChanged(_ sender: UIDatePicker) {
-        debugPrint(sender.date)
+expiryIndicator.expiry(date: sender.date)
+        //call the expiry indicator (selected date)
+        //debugPrint(sender.date)
     }
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         let imagePickerController = UIImagePickerController()
