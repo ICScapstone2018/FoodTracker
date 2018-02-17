@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F66A9E2038113C001CFF40 /* FoodItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F66A9D2038113C001CFF40 /* FoodItemTableViewController.swift */; };
 		8605441A202CDED1008EB278 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86054419202CDED1008EB278 /* FoodItem.swift */; };
 		8605441C202CE845008EB278 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8605441B202CE845008EB278 /* FoodItemTableViewCell.swift */; };
 		8683938F2025014D002F530E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683938E2025014D002F530E /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29F66A9D2038113C001CFF40 /* FoodItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewController.swift; sourceTree = "<group>"; };
 		86054419202CDED1008EB278 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		8605441B202CE845008EB278 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		8683938B2025014D002F530E /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				868393902025014D002F530E /* ViewController.swift */,
 				868393922025014E002F530E /* Main.storyboard */,
 				86CF0879202CCDF800ADA6B7 /* ExpiryIndicator.swift */,
+				29F66A9D2038113C001CFF40 /* FoodItemTableViewController.swift */,
 				86054419202CDED1008EB278 /* FoodItem.swift */,
 				8605441B202CE845008EB278 /* FoodItemTableViewCell.swift */,
 				868393952025014E002F530E /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F66A9E2038113C001CFF40 /* FoodItemTableViewController.swift in Sources */,
 				8605441C202CE845008EB278 /* FoodItemTableViewCell.swift in Sources */,
 				8605441A202CDED1008EB278 /* FoodItem.swift in Sources */,
 				868393912025014D002F530E /* ViewController.swift in Sources */,
