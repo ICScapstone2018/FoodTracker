@@ -20,14 +20,39 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var expiryIndicator: ExpiryIndicator!
     // MARK: Delegate Methods
 
+   // @IBAction func cancel(_ sender: Any) {
+    //    dismiss(animated: true, completion: nil)
+    //}
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if presentingViewController is UINavigationController {
+            // Add
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController {
+            // Edit
+            owningNavigationController.popViewController(animated: true)
+        }
     }
+    //override func viewDidLoad() {
+     //   super.viewDidLoad()
+     //   // Do any additional setup after loading the view, typically from a nib.
+     //   self.expiryDate.addTarget(self, action: #selector(dateChanged(_:)),
+      //  for: .valueChanged)
+    //}
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.expiryDate.addTarget(self, action: #selector(dateChanged(_:)),
-        for: .valueChanged)
+                                  for: .valueChanged)
+        
+        if let item = item {
+            // Only entered if item was set by the table view controller on edit
+            photoImageView.image = item.image
+            expiryDate.date = item.expiryDate
+            expiryIndicator.setIndicatorPercentage(date: item.expiryDate)
+        }
+        else {
+            expiryIndicator.indicatorPercentage = 0
+        }
     }
     @objc func dateChanged(_ sender: UIDatePicker) {
 expiryIndicator.expiry(date: sender.date)

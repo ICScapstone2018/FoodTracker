@@ -50,13 +50,44 @@ class FoodItemTableViewController: UITableViewController {
         return cell
     }
     
+  //  @IBAction func unwindToFoodItemList(sender: UIStoryboardSegue) {
+    //    if let sourceViewController = sender.source as? ViewController, let item = sourceViewController.item {
+    //        let newIndexPath = IndexPath(row: items.count, section: 0)
+    //        items.append(item)
+     //       tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
+     //   }
+   // }
     @IBAction func unwindToFoodItemList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? ViewController, let item = sourceViewController.item {
-            let newIndexPath = IndexPath(row: items.count, section: 0)
-            items.append(item)
-            tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Edit
+                items[selectedIndexPath.row] = item
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                // Add
+                let newIndexPath = IndexPath(row: items.count, section: 0)
+                items.append(item)
+                tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
+            }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "ShowItem" {
+            guard let detailViewController = segue.destination as? ViewController else {
+                fatalError("Unexpected destination \(segue.destination)")
+            }
+            guard let selectedTableViewCell = sender as? FoodItemTableViewCell else {
+                fatalError("Unexpected destination \(String(describing: sender))")
+            }
+            guard let indexPath = tableView.indexPath(for: selectedTableViewCell) else {
+                fatalError("Unexpected index path for \(selectedTableViewCell)")
+            }
+            detailViewController.item = items[indexPath.row]
+            }
+        }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
