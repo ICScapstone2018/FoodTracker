@@ -30,7 +30,8 @@ class ExpiryIndicator: UIStackView {
     }
     
     func setIndicatorPercentage(date: Date) {
-        let expiryTime = Int(date.timeIntervalSinceNow/((60*60*24*30)/100))
+        let expiryMath: Double = (60*60*24*30) / 100
+        let expiryTime = Int(date.timeIntervalSinceNow/expiryMath)
         self.indicatorPercentage = expiryTime
         //let monthDate = (60*60*24*30) / 100
         //return(date.timeIntervalSinceNow / Double(monthDate))

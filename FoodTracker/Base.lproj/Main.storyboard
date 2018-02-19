@@ -27,11 +27,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="aQw-wH-fdp">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="79"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fSj-iB-yK1" customClass="ExpiryIndicator" customModule="FoodTracker" customModuleProvider="target">
-                                            <rect key="frame" x="255" y="0.0" width="120" height="44"/>
+                                            <rect key="frame" x="244" y="0.0" width="131" height="79"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
                                     </subviews>
@@ -58,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIp-vT-ueJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="92"/>
+            <point key="canvasLocation" x="-76" y="91.304347826086968"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
