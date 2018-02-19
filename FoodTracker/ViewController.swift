@@ -55,7 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     @objc func dateChanged(_ sender: UIDatePicker) {
-expiryIndicator.expiry(date: sender.date)
+expiryIndicator.setIndicatorPercentage(date: sender.date)
         //call the expiry indicator (selected date)
         //debugPrint(sender.date)
     }
@@ -84,8 +84,11 @@ expiryIndicator.expiry(date: sender.date)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        debugPrint("STart preparing")
         super.prepare(for: segue, sender: sender)
+        debugPrint("in middle of preparing")
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            debugPrint("before return in prepare")
             return
         }
         

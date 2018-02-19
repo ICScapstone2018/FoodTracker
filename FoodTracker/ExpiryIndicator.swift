@@ -29,13 +29,14 @@ class ExpiryIndicator: UIStackView {
         }
     }
     
-    func setIndicatorPercentage(date: Date) -> Double {
-       // setIndicatorPercentage(date: item.expiryDate)
-        let monthDate = (60*60*24*30) / 100
-        return(date.timeIntervalSinceNow / Double(monthDate))
+    func setIndicatorPercentage(date: Date) {
+        let expiryTime = Int(date.timeIntervalSinceNow/((60*60*24*30)/100))
+        self.indicatorPercentage = expiryTime
+        //let monthDate = (60*60*24*30) / 100
+        //return(date.timeIntervalSinceNow / Double(monthDate))
  }
     
-    func expiry(date: Date) {
-        self.indicatorPercentage = Int(self.setIndicatorPercentage(date: date))
-    }
+   // func expiry(date: Date) {
+     //   self.indicatorPercentage = Int(self.setIndicatorPercentage(date: date))
+    //}
 }

@@ -66,9 +66,14 @@ class FoodItemTableViewController: UITableViewController {
             }
             else {
                 // Add
+                debugPrint("at start of add")
                 let newIndexPath = IndexPath(row: items.count, section: 0)
+                debugPrint("before appending item")
                 items.append(item)
+                debugPrint("after appending item")
                 tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
+                debugPrint("after appending")
+                
             }
         }
     }
