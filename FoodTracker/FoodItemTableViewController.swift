@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class FoodItemTableViewController: UITableViewController {
     var items = [FoodItem]()
@@ -14,6 +15,9 @@ class FoodItemTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let restored = loadItems() {
+            items += restored
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,6 +59,7 @@ class FoodItemTableViewController: UITableViewController {
             // Delete the row from the data source
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            saveItems()
         }
     }
     
@@ -81,7 +86,7 @@ class FoodItemTableViewController: UITableViewController {
                 debugPrint("after appending item")
                 tableView.insertRows(at: [newIndexPath], with: .automatic) //iOS picks animation
                 debugPrint("after appending")
-                
+                saveItems()
             }
         }
     }
@@ -100,6 +105,16 @@ class FoodItemTableViewController: UITableViewController {
             detailViewController.item = items[indexPath.row]
             }
         }
+    
+    func saveItems() {
+        if !NSKeyedArchiver.archiveRootObject(items, toFile: FoodItem.archiveURL.path) {
+            os_log("Cannot save in %@", log: OSLog.default, type: .debug, FoodItem.archiveURL.path)
+        }
+    }
+    
+    func loadItems() -> [FoodItem]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: FoodItem.archiveURL.path) as? [FoodItem]
+    }
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
